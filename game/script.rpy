@@ -4,15 +4,15 @@
 # name of the character.
 
 ## Characters
-# define = Character('', color="#")
-define marcin = Character('Marcio', color="#090909")
-define rubens = Character('Rubens', color="#e0e0e0")
-define amarelo = Character('Amarelo', color="#ffd700")
-define gabigol = Character('Gabigol', color="#090909")
-define taliz = Character('Taliz', color="#1e90ff")
-define zeh = Character('Zehzin', color="#B8860B")
-define johnny = Character('Johnny Boy', color="#B8860B")
-define sane = Character('Sanefuji', color="#e0ffff")
+# define = DynamicCharacter('', color="#")
+define marcin = DynamicCharacter("marcio_name", color="#090909")
+define rubens = DynamicCharacter("rubens_name", color="#e0e0e0")
+define amarelo = DynamicCharacter("amarelo_name", color="#ffd700")
+define gabigol = DynamicCharacter("gabigol_name", color="#090909")
+define taliz = DynamicCharacter("taliz_name", color="#1e90ff")
+define zeh = DynamicCharacter("zeh_name", color="#B8860B")
+define johnny = DynamicCharacter("johnny_name", color="#B8860B")
+define sane = DynamicCharacter("sane_name", color="#e0ffff")
 
 ## flags
 default f_goodend = False
@@ -55,6 +55,24 @@ label main:
     if player_name == "":
         $ player_name="Bóris"
 
+    if player_name.lower() == "rubens":
+        $ marcio_name = "Rubens"
+        $ rubens_name = "Rubens"
+        $ amarelo_name = "Rubens"
+        $ gabigol_name = "Rubens"
+        $ taliz_name = "Rubens"
+        $ zeh_name = "Rubens"
+        $ johnny_name = "Rubens" 
+        $ sane_name = "Rubens"
+    else:
+        $ marcio_name = "Marcin"
+        $ rubens_name = "Rubn9"
+        $ amarelo_name = "Amarelo"
+        $ gabigol_name = "Gabigol"
+        $ taliz_name = "Taliz"
+        $ zeh_name = "Zehzin"
+        $ johnny_name = "Jhone Boy" 
+        $ sane_name = "Sanefuji"
     
     "Beleza, [player_name]. Agora, defina seu background -- como foi sua trajetória até chegar aqui?"
 
@@ -163,6 +181,72 @@ label bike_1_ferias:
     
     jump aula_sd1_01
 
+label bike_2:
+
+    "bike dia 2"
+    
+    jump aula_sd2_01
+
+label bike_3:
+
+    "bike dia 3"
+    
+    jump aula_sd3_01
+
+label bike_4:
+
+    "bike dia 4"
+    
+    jump aula_java_01
+
+label bike_5:
+
+    "bike dia 5"
+    
+    jump aula_sd1_02
+
+label bike_6:
+
+    "bike dia 6"
+    
+    jump aula_sd2_02
+
+label bike_7:
+
+    "bike dia 7"
+    
+    jump aula_sd3_02
+
+label bike_8:
+
+    "bike dia 8"
+    
+    jump aula_java_02
+
+label bike_9:
+
+    "bike dia 9"
+    
+    jump aula_sd1_03
+
+label bike_10:
+
+    "bike dia 10"
+    
+    jump aula_sd2_03
+
+label bike_11:
+
+    "bike dia 11"
+    
+    jump aula_sd3_03
+
+label bike_12:
+
+    "bike dia 12"
+    
+    jump aula_java_03
+
 ## eventos de circular
 
 label circular_1:
@@ -179,7 +263,75 @@ label circular_1:
     
     jump aula_sd1_01
 
+label circular_2:
+
+    "circular dia 2"
+    
+    jump aula_sd2_01
+
+label circular_3:
+
+    "circular dia 3"
+    
+    jump aula_sd3_01
+
+label circular_4:
+
+    "circular dia 4"
+    
+    jump aula_java_01
+
+label circular_5:
+
+    "circular dia 5"
+    
+    jump aula_sd1_02
+
+label circular_6:
+
+    "circular dia 6"
+    
+    jump aula_sd2_02
+
+label circular_7:
+
+    "circular dia 7"
+    
+    jump aula_sd3_02
+
+label circular_8:
+
+    "circular dia 8"
+    
+    jump aula_java_02
+
+label circular_9:
+
+    "circular dia 9"
+    
+    jump aula_sd1_03
+
+label circular_10:
+
+    "circular dia 10"
+    
+    jump aula_sd2_03
+
+label circular_11:
+
+    "circular dia 11"
+    
+    jump aula_sd3_03
+
+label circular_12:
+
+    "circular dia 12"
+    
+    jump aula_java_03
+
 ## aulas
+
+#sd1
 
 label aula_sd1_01:
     
@@ -205,11 +357,150 @@ menu:
         
         jump almoco
         
-    "prestar atenção":
+    "Prestar atenção":
         "O professor se perdeu na explicação e não conseguiu falar nada de útil depois de 5 minutos."
         "Você não aprendeu nada, e começou a questionar o quão bons são os professores da poli."
         $ s_sadboy += 1
         "Você ganhou um ponto de Sadboy."
+        jump almoco
+
+label aula_sd1_02:
+   
+   "Aula do Gomi"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
+        jump almoco
+
+label aula_sd1_03:
+
+   "Aula do Gomi"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
+        jump almoco
+
+
+## sd2
+
+label aula_sd2_01:
+
+   "Aula do Balburdini"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
+        jump almoco
+
+label aula_sd2_02:
+
+   "Aula do Balburdini"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
+        jump almoco
+
+label aula_sd2_03:
+
+   "Aula do Balburdini"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
+        jump almoco
+
+## sd3
+
+label aula_sd3_01:
+
+   "Aula da Cintia"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
+        jump almoco
+
+label aula_sd3_02:
+
+   "Aula da Cintia"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
+        jump almoco
+
+label aula_sd3_03:
+
+   "Aula da Cintia"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
+        jump almoco
+
+## java
+
+label aula_java_01:
+
+   "Aula do Mark Dedos"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
+        jump almoco
+
+label aula_java_02:
+
+   "Aula do Mark Dedos"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
+        jump almoco
+
+label aula_java_03:
+
+   "Aula do Mark Dedos"
+   "O que você quer fazer?"
+    
+menu:
+    "Varzear":
+        jump almoco
+        
+    "Prestar atenção":
         jump almoco
 
 ## Almoços
@@ -219,12 +510,53 @@ label almoco:
     "É hora do almoço. Não seja um sanefuji e escolha um lugar para almoçar"
     
 menu:
+
+    "Comer na física com o Zé e com o Gabigol" if day == 1:
+        jump fisica
     
-    "Comer no poke com o Rubens" if day == 1:
-        $ renpy.jump("bike_" + str(day))
+    "Comer no poke com o Rubens" if day == 6 or day == 10:
+        $ renpy.jump("poke_" + str(day))
+    
+    "Comer no poke com o pessoal pós java" if day == 4 or day == 8 or day == 12:
+        $ renpy.jump("poke_" + str(day))
     
     "Ir na Prefeitura com o Marcin" if day == 2:
-        $ renpy.jump("circular_" + str(day))
+        $ renpy.jump("pref_" + str(day))
+    
+    "Todo mundo foi pra Prefeitura..." if day == 2 or day == 5 or day == 7 or day == 11:
+        $ renpy.jump("pref_" + str(day))
+
+label fisica:
+
+    show gabigol angry at left
+    with dissolve
+    gabigol "Cara."
+    
+    show zeh happy at right
+    with dissolve
+    zeh "Que?"
+    
+    gabigol "Isso é o dedão do porco?"
+    
+    show zeh annoyed
+    zeh "wtf"
+    
+    "E ninguém nunca mais quis comer na Física."
+
+label poke_1:
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ##começo dos menes
 
