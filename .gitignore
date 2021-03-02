@@ -8,7 +8,9 @@
 *.bak
 
 game/saves
+game/saves/*
 game/cache
+game/cache/*
 
 log.txt
 errors.txt
