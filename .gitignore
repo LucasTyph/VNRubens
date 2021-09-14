@@ -12,6 +12,4 @@ game/saves/*
 game/cache
 game/cache/*
 
-log.txt
-errors.txt
-traceback.txt
+*.txt
